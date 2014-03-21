@@ -491,6 +491,23 @@ hr {
 .game-explanation {
   margin-top: 50px; }
 
+.custom-tile-selector {
+  margin-top: 40px; }
+  .custom-tile-container {
+    float: left;
+    position: relative;
+    height: 130px;
+    width: 110px;
+    padding: 5px; }
+    .custom-tile-image-container {
+      position: relative;
+      height: 107px;
+      width: 107px;
+      border: 1px solid grey; }
+      .custom-tile-image {
+        height: 107px;
+        width: 107px; }
+
 @media screen and (max-width: 520px) {
   html, body {
     font-size: 15px; }

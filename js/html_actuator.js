@@ -1,8 +1,9 @@
-function HTMLActuator() {
+function HTMLActuator(customTileSet) {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
+  this.customTileSet = customTileSet;
 
   this.score = 0;
 }
@@ -62,7 +63,11 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  if (this.customTileSet.get(tile.value)) {
+      inner.innerHTML = "<img style='width:107px; height:107px' src='" + this.customTileSet.get(tile.value) + "'/>";
+  } else {
+      inner.textContent = tile.value;
+  }
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

@@ -1,8 +1,9 @@
-function GameManager(size, InputManager, Actuator, ScoreManager) {
+function GameManager(size, InputManager, Actuator, ScoreManager, CustomTileManager) {
   this.size         = size; // Size of the grid
   this.inputManager = new InputManager;
   this.scoreManager = new ScoreManager;
-  this.actuator     = new Actuator;
+  this.customTileManager = new CustomTileManager;
+  this.actuator     = new Actuator(this.customTileManager.tileSet);
 
   this.startTiles   = 2;
 
@@ -10,7 +11,9 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
 
-  this.setup();
+  var that = this;
+  this.customTileManager.setupTileSelector(function() {that.setup();});
+  //this.setup();
 }
 
 // Restart the game

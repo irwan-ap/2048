@@ -22,7 +22,6 @@
         <div class="best-container">0</div>
       </div>
     </div>
-    <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
 
     <div class="game-container">
       <div class="game-message">
@@ -65,19 +64,30 @@
       </div>
     </div>
 
+    <div class="custom-tile-selector">
+        <p class="game-intro">Drag and drop images from your computer or internet to the empty tiles, then press <strong>Start!</strong></p>
+    </div>
+
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same image touch, they <strong>merge into one!</strong>
     </p>
     <hr>
     <p>
-    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+    <strong class="important">Background story:</strong> Everybody in the office is playing 2048. One fine day somebody floated the idea of making a version of 2048 where you can upload your own images to be used as the tiles. So here it is.<br/>
     </p>
     <hr>
     <p>
-    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    <strong class="important">Note:</strong> This is <strong>NOT</strong> the official version of 2048.
+    You can play the original version <a href="http://gabrielecirulli.github.io/2048/">here</a>.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a><br/>
+    Modified by <a href="https://github.com/irwan-ap" target="_blank">Irwan</a> to allow users to upload their own images to be used as the tiles.
     </p>
   </div>
 
+  <script src="js/custom_tile_manager.js"></script>
   <script src="js/animframe_polyfill.js"></script>
   <script src="js/keyboard_input_manager.js"></script>
   <script src="js/html_actuator.js"></script>
